@@ -22,7 +22,7 @@ while true; do
             printf "%d %s\n" "$count" "$tag"
         done | sort -nr | awk '{printf "%s [%d]\n", $2, $1}')
 
-    selected_tag_line=$(echo "$tag_list" | fzf --prompt="Выбери тег: ")
+    selected_tag_line=$(echo "$tag_list" | fzf --prompt="Search tag: ")
     selected_tag=$(echo "$selected_tag_line" | grep -o '^#[^ ]*')
 
     if [ -z "$selected_tag" ]; then
@@ -32,7 +32,7 @@ while true; do
     matching_files=$(rg -l "$selected_tag" . --glob '*.md')
 
     selected_file=$(echo "$matching_files" | fzf \
-        --prompt="Открыть заметку (Esc — назад): " \
+        --prompt="Open note (Esc — go back): " \
         --preview "bat --color=always --plain {}" \
         --preview-window=right:70%)
 
