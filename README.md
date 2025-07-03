@@ -4,6 +4,10 @@ A small and fast command-line utility to search, sort, and open your Markdown no
 
 It scans `.md` files in the given directory, extracts hashtags (e.g., `#todo`, `#idea`), and provides an interactive terminal UI for working with them.
 
+## 📺 Demo
+
+![tagnotes demo](./demo.gif)
+
 ## ✨ Features
 
 - 🧩 Extracts `#tags` from Markdown notes (ignores headings like `# Title`)
@@ -15,31 +19,8 @@ It scans `.md` files in the given directory, extracts hashtags (e.g., `#todo`, `
 
 ## 🚀 Installation
 
-### 1. Clone the repository
-
 ```bash
-git clone https://github.com/your-username/note-tags.git
-cd note-tags
-```
-
-### 2. Install the script
-
-This will create a symbolic link called tagnotes in ~/.local/bin:
-```bash
-chmod +x install-tagnote-cli.sh
-./install-tagnote-cli.sh
-```
-
-Make sure `~/.local/bin` is in your $PATH. If not, add this line to your `~/.bashrc` or `~/.zshrc`:
-
-```bash
-export PATH="$HOME/.local/bin:$PATH"
-```
-
-Then reload your shell:
-
-```bash
-source ~/.zshrc    # or ~/.bashrc
+curl -fsSL https://raw.githubusercontent.com/pahMelnik/tagnote/refs/heads/main/install.sh | bash
 ```
 
 ## ✅ Dependencies
