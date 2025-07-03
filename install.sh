@@ -4,7 +4,7 @@ set -e
 
 INSTALL_DIR="$HOME/.local/bin"
 TARGET="$INSTALL_DIR/tagnotes"
-SCRIPT_URL="https://raw.githubusercontent.com/pahmelnik/note-tags/main/main.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/pahMelnik/tagnote/refs/heads/main/main.sh"
 
 # Create folder if it does not exist
 mkdir -p "$INSTALL_DIR"
