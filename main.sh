@@ -16,7 +16,7 @@ ORIGINAL_DIR="$(pwd)"
 cd "$NOTES_DIR" || exit 1
 
 while true; do
-    tag_list=$(rg -oP '(?<=^|\s)(#[^\s#][^\s]*)(?=\s|$)' . --glob '*.md' | \
+    tag_list=$(rg -oP '(?<=^|\s)(#[a-zA-Z0-9_-]+)(?=\s|$|[.,;:!?()\047])' . --glob '*.md' | \
         grep -o '#[^ ]*' | sort | uniq | while read -r tag; do
             count=$(rg -l "$tag" . --glob '*.md' | wc -l)
             printf "%d %s\n" "$count" "$tag"
